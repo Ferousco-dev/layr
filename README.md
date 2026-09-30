@@ -34,5 +34,4 @@ Local unit tests and live PostgreSQL/Redis tests pass. Docker images have not be
 
 ## Contributing and license
 
-Contribution policy and licensing are not yet established. Do not assume permission for public redistribution until a license is committed.
-# layr
+Contribution policy and licensing are not yet established.
