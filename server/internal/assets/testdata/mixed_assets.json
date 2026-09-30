@@ -1,0 +1,43 @@
+{
+  "id": "1:1", "name": "Landing", "type": "FRAME",
+  "children": [
+    {"id": "2:1", "name": "Hero Image", "type": "RECTANGLE",
+     "fills": [{"type": "IMAGE", "imageRef": "hero111", "scaleMode": "FILL"}]},
+    {"id": "2:2", "name": "Hero Copy", "type": "RECTANGLE",
+     "fills": [{"type": "IMAGE", "imageRef": "hero111", "scaleMode": "FIT", "rotation": 90}]},
+    {"id": "2:3", "name": "Card", "type": "FRAME", "fills": [{"type": "SOLID", "color": {"r": 1, "g": 1, "b": 1, "a": 1}}],
+     "children": [
+       {"id": "3:1", "name": "Avatar", "type": "ELLIPSE", "fills": [{"type": "IMAGE", "imageRef": "avatar22", "scaleMode": "CROP", "imageTransform": [[1, 0, 0], [0, 1, 0]]}]},
+       {"id": "3:2", "name": "Card Title", "type": "TEXT", "characters": "Hi"},
+       {"id": "3:3", "name": "Arrow Right", "type": "VECTOR"},
+       {"id": "3:4", "name": "Divider", "type": "LINE"}
+     ]},
+    {"id": "2:4", "name": "Logo", "type": "GROUP",
+     "children": [
+       {"id": "4:1", "name": "Mark", "type": "VECTOR"},
+       {"id": "4:2", "name": "Ring", "type": "BOOLEAN_OPERATION"},
+       {"id": "4:3", "name": "Dot", "type": "ELLIPSE"}
+     ]},
+    {"id": "2:5", "name": "Illustration", "type": "FRAME",
+     "children": [
+       {"id": "5:1", "name": "Sky", "type": "RECTANGLE"},
+       {"id": "5:2", "name": "Cloud", "type": "GROUP", "children": [{"id": "5:3", "name": "Puff", "type": "VECTOR"}, {"id": "5:4", "name": "Puff 2", "type": "VECTOR"}]},
+       {"id": "5:5", "name": "Star", "type": "STAR"}
+     ]},
+    {"id": "2:6", "name": "Icon Button", "type": "INSTANCE", "componentId": "9:1",
+     "fills": [{"type": "SOLID", "color": {"r": 0, "g": 0, "b": 1, "a": 1}}],
+     "children": [{"id": "I2:6;9:2", "name": "Plus", "type": "VECTOR"}]},
+    {"id": "2:7", "name": "Instance With Photo", "type": "INSTANCE", "componentId": "9:3",
+     "children": [{"id": "I2:7;9:4", "name": "Photo", "type": "RECTANGLE", "fills": [{"type": "IMAGE", "imageRef": "avatar22", "scaleMode": "FILL"}]}]},
+    {"id": "2:8", "name": "Boxes", "type": "GROUP",
+     "children": [{"id": "8:1", "name": "A", "type": "RECTANGLE"}, {"id": "8:2", "name": "B", "type": "RECTANGLE"}]},
+    {"id": "2:9", "name": "Hidden Logo", "type": "VECTOR", "visible": false},
+    {"id": "2:10", "name": "Promo Video", "type": "RECTANGLE", "fills": [{"type": "VIDEO"}]},
+    {"id": "2:11", "name": "Texture", "type": "RECTANGLE", "fills": [{"type": "PATTERN"}]},
+    {"id": "2:12", "name": "Marked", "type": "FRAME", "exportSettings": [{"format": "SVG"}],
+     "children": [{"id": "12:1", "name": "T", "type": "TEXT", "characters": "x"}]},
+    {"id": "2:13", "name": "Future", "type": "FUTURE_SUPER_NODE", "children": [{"id": "13:1", "name": "Inner", "type": "VECTOR"}]},
+    {"id": "2:14", "name": "Broken Image", "type": "RECTANGLE", "fills": [{"type": "IMAGE"}]},
+    {"id": "2:15", "name": "Gif", "type": "RECTANGLE", "fills": [{"type": "IMAGE", "imageRef": "gifref33", "gifRef": "g1"}]}
+  ]
+}

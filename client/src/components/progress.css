@@ -1,0 +1,4 @@
+/* The slim loading bar fixed to the top edge of every screen. */
+.top-progress{position:fixed;top:0;left:0;z-index:1000;height:3px;width:0;opacity:0;background:linear-gradient(90deg,#3157f6,#168ef4 50%,#08d9c4);border-radius:0 3px 3px 0;box-shadow:0 0 8px #168ef480;pointer-events:none;transition:width .25s ease-out,opacity .25s ease}
+.top-progress.on{opacity:1}
+@media(prefers-reduced-motion:reduce){.top-progress{transition:none}}

@@ -1,0 +1,11 @@
+{
+  "schema_version": 1, "import_id": "11111111-1111-4111-8111-111111111111",
+  "source": {"file_key": "FILEKEY123456", "node_id": "12:34", "node_ids": ["12:34"]},
+  "assets": [
+    {"id": "asset_0123456789abcdef", "kind": "svg", "format": "svg", "media_type": "image/svg+xml", "path": "assets/illustration-0123ab.svg",
+     "size_bytes": 2048, "sha256": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef", "width": 520, "height": 480,
+     "sources": [{"node_id": "12:40", "role": "export"}]}
+  ],
+  "references": [{"node_id": "12:34", "path": "reference/12-34-aabbcc.png", "media_type": "image/png", "size_bytes": 999, "sha256": "ff", "width": 1440, "height": 720}],
+  "warnings": []
+}

@@ -1,0 +1,42 @@
+{
+  "ilana_version": "1.1.0",
+  "project": "layr-server-m1",
+  "mode": "FLEET",
+  "phase": "08",
+  "gate": "G8",
+  "agent": "conductor",
+  "process_style": "hybrid",
+  "rigour": 3,
+  "ceremony": "regulated",
+  "open": [],
+  "overrides": [
+    "OVR-001",
+    "OVR-002",
+    "OVR-003",
+    "OVR-004",
+    "OVR-005",
+    "OVR-006"
+  ],
+  "counters": {
+    "REQ": 12,
+    "NFR": 15,
+    "DOM": 3,
+    "DES": 30,
+    "UI": 9,
+    "TC": 0,
+    "DEF": 0,
+    "CR": 9,
+    "RSK": 2,
+    "DEC": 7,
+    "MET": 0,
+    "ETH": 3
+  },
+  "attempts": {
+    "G0": 1,
+    "G1": 1,
+    "G2": 1,
+    "G3": 1,
+    "G4": 1,
+    "G5": 2
+  }
+}

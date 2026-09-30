@@ -1,0 +1,37 @@
+{
+  "name": "Weird file 🎨",
+  "nodes": {
+    "5:1": {
+      "document": {
+        "id": "5:1", "name": "Board", "type": "SECTION", "visible": false, "opacity": 0,
+        "layoutGrids": [{"pattern": "COLUMNS", "sectionSize": 1, "visible": true, "color": {"r": 1, "g": 0, "b": 0, "a": 0.1}, "alignment": "STRETCH", "gutterSize": 20, "offset": 0, "count": 12}],
+        "styles": {"fill": "S:10", "text": "S:11"},
+        "boundVariables": {"fills": [{"type": "VARIABLE_ALIAS", "id": "VariableID:1:2"}]},
+        "someBrandNewProperty": {"nested": [1, 2, 3]},
+        "fills": [
+          {"type": "FUTURE_PAINT", "mystery": 1},
+          {"type": "SOLID", "color": {"r": 0, "g": 0, "b": 0, "a": 1}, "boundVariables": {"color": {"type": "VARIABLE_ALIAS", "id": "VariableID:9:9"}}}
+        ],
+        "effects": [
+          {"type": "NOISE", "visible": true, "noiseType": "MONOCHROMATIC", "noiseSize": 1, "density": 0.5},
+          {"type": "FUTURE_EFFECT"}
+        ],
+        "strokeDashes": null,
+        "children": [
+          {"id": "5:2", "name": "Table", "type": "TABLE", "children": [{"id": "5:3", "name": "Cell", "type": "TABLE_CELL"}]},
+          {"id": "5:4", "name": "Note", "type": "STICKY", "characters": "日本語 مرحبا 👋"},
+          {"id": "5:5", "name": "Arrow", "type": "CONNECTOR"},
+          {"id": "5:6", "name": "Curved text", "type": "TEXT_PATH"},
+          {"id": "5:7", "name": "Pie", "type": "ELLIPSE", "arcData": {"startingAngle": 0, "endingAngle": 3.14, "innerRadius": 0.4}, "strokeCap": "ROUND", "strokeJoin": "MITER", "strokeMiterAngle": 28.96},
+          {"id": "5:8", "name": "Link", "type": "TEXT", "characters": "click",
+           "style": {"fontFamily": "Inter", "fontSize": 12, "hyperlink": {"type": "URL", "url": "https://example.test"}, "opentypeFlags": {"LIGA": 0}},
+           "lineTypes": ["NONE"], "lineIndentations": [0]},
+          {"id": "5:9", "name": "Card copy", "type": "INSTANCE", "componentId": "2:1",
+           "overrides": [{"id": "5:9", "overriddenFields": ["fills", "characters"]}],
+           "absoluteBoundingBox": {"x": -100.5, "y": 1e6, "width": 0, "height": 1e-9}}
+        ]
+      },
+      "components": {}, "componentSets": {}, "schemaVersion": 0, "styles": {}
+    }
+  }
+}

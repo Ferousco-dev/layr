@@ -1,0 +1,31 @@
+req_id,requirement,type,priority,source,design_id,module,test_ids,result,status
+REQ-001,Load and validate typed environment configuration before listening,functional,must,"stakeholder brief 2026-09-29","DES-001;DES-002;DES-006;DES-008;DES-017;DES-019;DES-030",,,not run,designed
+REQ-002,Initialize verify and close a bounded PostgreSQL pool,functional,must,"stakeholder brief 2026-09-29","DES-002;DES-003;DES-010;DES-017;DES-021;DES-029;DES-030",,,not run,designed
+REQ-003,Initialize verify and close Redis,functional,must,"stakeholder brief 2026-09-29","DES-002;DES-004;DES-011;DES-017;DES-022;DES-029;DES-030",,,not run,designed
+REQ-004,Apply report and reverse ordered explicit SQL migrations,functional,must,"stakeholder brief 2026-09-29","DES-006;DES-007;DES-012;DES-017;DES-018;DES-023;DES-030",,,not run,designed
+REQ-005,Serve HTTP with configured address limits and timeouts,functional,must,"stakeholder brief 2026-09-29","DES-002;DES-005;DES-008;DES-014;DES-015;DES-017;DES-019;DES-027;DES-028",,,not run,designed
+REQ-006,Expose dependency-free process liveness,functional,must,"stakeholder brief 2026-09-29","DES-005;DES-006;DES-013;DES-015;DES-017;DES-025;DES-028",,,not run,designed
+REQ-007,Expose bounded PostgreSQL and Redis readiness,functional,must,"stakeholder brief 2026-09-29","DES-003;DES-004;DES-005;DES-006;DES-010;DES-011;DES-013;DES-015;DES-017;DES-024;DES-028",,,not run,designed
+REQ-008,Propagate or generate an opaque request correlation ID,functional,must,"stakeholder brief 2026-09-29","DES-005;DES-006;DES-009;DES-014;DES-017;DES-020;DES-026;DES-027",,,not run,designed
+REQ-009,Emit structured redacted lifecycle and request logs,functional,must,"stakeholder brief and intake 2026-09-29","DES-002;DES-005;DES-006;DES-009;DES-014;DES-017;DES-020;DES-027;DES-029",,,not run,designed
+REQ-010,Perform bounded signal-driven graceful shutdown,functional,must,"stakeholder brief 2026-09-29","DES-002;DES-006;DES-016;DES-017;DES-029;DES-030",,DEF-001-regression:TestRunLifecycleServeFailureClosesResources,partial (local unit only),designed
+REQ-011,Provide reproducible Docker local infrastructure,functional,must,"stakeholder brief and intake 2026-09-29","DES-007;DES-018;DES-030",,,not run,designed
+REQ-012,Document setup migration operation verification and recovery,functional,must,"stakeholder brief and intake 2026-09-29","DES-007;DES-018;DES-030",,,not run,designed
+NFR-001,Fail critical startup within 10 seconds,non-functional,must,"analyst derivation 2026-09-29","DES-002;DES-003;DES-004;DES-008;DES-010;DES-011;DES-016;DES-017;DES-019;DES-021;DES-022;DES-030",,,not run,designed
+NFR-002,Enforce numeric HTTP and shutdown timeout defaults,non-functional,must,"analyst derivation 2026-09-29","DES-002;DES-005;DES-008;DES-015;DES-019;DES-028;DES-029",,,not run,designed
+NFR-003,Default request body limit is 1 MiB,non-functional,must,"analyst derivation 2026-09-29","DES-005;DES-008;DES-014;DES-019;DES-027",,,not run,designed
+NFR-004,Health p95 is at most 100 ms under stated load,non-functional,must,"analyst derivation 2026-09-29","DES-005;DES-013;DES-015;DES-025;DES-028",,,not run,designed
+NFR-005,Unhealthy readiness returns within 1 second,non-functional,must,"analyst derivation 2026-09-29","DES-003;DES-004;DES-005;DES-008;DES-010;DES-011;DES-013;DES-019;DES-021;DES-022;DES-024",,,not run,designed
+NFR-006,PostgreSQL and Redis pool defaults are 10,non-functional,must,"analyst derivation 2026-09-29","DES-003;DES-004;DES-008;DES-010;DES-011;DES-019;DES-021;DES-022",,,not run,designed
+NFR-007,All test logs parse as JSON with zero seeded-secret leakage,non-functional,must,"stakeholder security requirement 2026-09-29","DES-005;DES-006;DES-009;DES-014;DES-020;DES-027",,,not run,designed
+NFR-008,All tested completions carry matching request IDs,non-functional,must,"stakeholder observability requirement 2026-09-29","DES-005;DES-006;DES-009;DES-014;DES-020;DES-026;DES-027",,,not run,designed
+NFR-009,Stop accepting within 1 second and clean up within 30 seconds,non-functional,must,"analyst derivation 2026-09-29","DES-002;DES-008;DES-016;DES-019;DES-029;DES-030",,,not run,designed
+NFR-010,Migration cycle passes 3 fresh-database runs,non-functional,must,"analyst derivation 2026-09-29","DES-007;DES-012;DES-018;DES-023;DES-030",,,not run,designed
+NFR-011,Go formatting vet test race and build commands exit zero,non-functional,must,"stakeholder quality gates 2026-09-29","DES-001;DES-007;DES-017;DES-018;DES-030",,,not run,designed
+NFR-012,Tests use zero live Figma calls and zero OAuth credentials,non-functional,must,"stakeholder test constraint 2026-09-29","DES-001;DES-007;DES-017;DES-018;DES-030",,,not run,designed
+NFR-013,No unbounded work loops and work exits within 30 seconds,non-functional,must,"stakeholder concurrency requirement 2026-09-29","DES-002;DES-005;DES-014;DES-015;DES-016;DES-017;DES-024;DES-028;DES-029;DES-030",,DEF-001-regression:TestRunLifecycleServeFailureClosesResources,partial (local unit only),designed
+NFR-014,Clean stack reaches readiness within 120 seconds in 3 of 3 runs,non-functional,must,"analyst derivation 2026-09-29","DES-007;DES-008;DES-018;DES-030",,,not run,designed
+NFR-015,Runtime uses only PostgreSQL and Redis external data services,non-functional,must,"stakeholder scope constraint 2026-09-29","DES-001;DES-007;DES-018;DES-030",,,not run,designed
+DOM-001,Request and shutdown I/O honors Go context cancellation,domain,must,"Go convention and stakeholder brief 2026-09-29","DES-001;DES-002;DES-003;DES-004;DES-005;DES-010;DES-011;DES-014;DES-016;DES-021;DES-022;DES-024;DES-026;DES-027;DES-028;DES-029;DES-030",,,not run,designed
+DOM-002,PostgreSQL is durable authority and Redis is ephemeral,domain,must,"stakeholder product constraint 2026-09-29","DES-003;DES-004;DES-010;DES-011;DES-021;DES-022",,,not run,designed
+DOM-003,All schema changes use ordered explicit SQL migrations,domain,must,"stakeholder database constraint 2026-09-29","DES-007;DES-012;DES-023;DES-030",,,not run,designed

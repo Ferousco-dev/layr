@@ -1,0 +1,22 @@
+/* Loader and skeleton: the only loading visuals in the app. */
+.loader{--size:70px;width:var(--size);aspect-ratio:1;flex:none;position:relative;display:inline-block;
+  background:
+    radial-gradient(farthest-side,#ffa516 90%,#0000) center/calc(var(--size)*.2286) calc(var(--size)*.2286),
+    radial-gradient(farthest-side,green 90%,#0000) bottom/calc(var(--size)*.1714) calc(var(--size)*.1714);
+  background-repeat:no-repeat;animation:l17 1s infinite linear}
+.loader::before{content:"";position:absolute;width:calc(var(--size)*.1143);aspect-ratio:1;inset:auto 0 calc(var(--size)*.2286);margin:auto;background:#ccc;border-radius:50%;transform-origin:50% calc(100% + var(--size)*.1429);animation:inherit;animation-duration:.5s}
+@keyframes l17{100%{transform:rotate(1turn)}}
+.loader-page{min-height:100svh;display:grid;place-items:center}
+
+.skeleton{position:relative;overflow:hidden;display:block;background:#edf1f6;border-radius:8px}
+.skeleton::after{content:"";position:absolute;inset:0;transform:translateX(-100%);background:linear-gradient(90deg,transparent,#ffffffb3,transparent);animation:shimmer 1.4s var(--ease) infinite}
+@keyframes shimmer{100%{transform:translateX(100%)}}
+.skeleton.round{border-radius:50%}
+.skeleton.pill{border-radius:9999px}
+
+/* A spinner is progress, not decoration, so reduced motion slows it instead of stopping it. */
+@media(prefers-reduced-motion:reduce){
+  .loader{animation:l17 2.4s linear infinite!important}
+  .loader::before{animation:l17 1.2s linear infinite!important}
+  .skeleton::after{display:none}
+}

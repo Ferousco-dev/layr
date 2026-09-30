@@ -1,0 +1,12 @@
+/* 404 page. */
+.notfound-page{background:linear-gradient(135deg,#f8fbff,#f8fafc)}
+.notfound-page .notfound{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:48px 24px 72px}
+.notfound-page .code{margin:0;font-size:clamp(96px,18vw,168px);line-height:1;font-weight:800;letter-spacing:-6px;background:linear-gradient(100deg,#3063fb 0%,#1593f5 35%,#21dcc2 75%,#1de7ae 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.notfound-page h1{margin:12px 0 8px;font-size:clamp(26px,4vw,36px);letter-spacing:-1px}
+.notfound-page .lead{margin:0 0 28px;max-width:440px;color:var(--secondary);font-size:16px;line-height:1.6}
+.notfound-page .actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.notfound-page .go,.notfound-page .alt{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 26px;border-radius:9999px;font:500 15px var(--font);text-decoration:none;transition:transform .18s var(--ease),box-shadow .18s var(--ease),background .18s}
+.notfound-page .go{background:var(--gradient);color:#fff}
+.notfound-page .go:hover{transform:translateY(-1px);box-shadow:0 8px 20px #2563eb2e}
+.notfound-page .alt{border:1px solid #d5dce8;background:#fff;color:var(--text)}
+.notfound-page .alt:hover{background:#f8faff}

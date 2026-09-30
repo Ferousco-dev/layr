@@ -1,0 +1,49 @@
+/* Generation progress page. */
+.generation-page{background:linear-gradient(135deg,#fafcff,#f5f9ff)}
+.generation-main{width:100%;max-width:1200px;margin:0 auto;padding:0 24px 32px}
+.generation-page .crumbs{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--secondary);margin:0 0 14px;flex-wrap:wrap}
+.generation-page .crumbs a{color:var(--secondary);text-decoration:none}
+.generation-page .crumbs a:hover{color:var(--text);text-decoration:underline}
+.generation-page .crumbs span:last-child{color:var(--text)}
+.generation-page .gen-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:16px;align-items:start}
+.generation-page .gen-design,.generation-page .gen-progress{background:#ffffffdf;border:1px solid #eef2f6;border-radius:16px;padding:20px}
+.generation-page .gen-image{aspect-ratio:1.4;border-radius:12px;background:linear-gradient(120deg,#e8edfc,#e5f0fc);display:grid;place-items:center;overflow:hidden;padding:16px}
+.generation-page .gen-image img{max-width:100%;max-height:100%;object-fit:contain;border-radius:6px;box-shadow:0 8px 30px #0f172a1f}
+.generation-page .gen-design h2{font-size:18px;letter-spacing:-.4px;margin:16px 0 4px}
+.generation-page .gen-meta{margin:0;font-size:13px;color:var(--secondary)}
+.generation-page .gen-loading{display:grid;place-items:center;padding:60px 0}
+
+.generation-page .gen-head{display:flex;align-items:center;gap:16px;margin-bottom:20px}
+.generation-page .gen-head h1{font-size:22px;letter-spacing:-.6px;margin:0 0 4px}
+.generation-page .gen-head p{margin:0;font-size:13px;color:var(--secondary)}
+.generation-page .bar{height:8px;border-radius:9999px;background:#eef2f6;overflow:hidden}
+.generation-page .bar span{display:block;height:100%;border-radius:9999px;background:var(--gradient);transition:width .5s var(--ease)}
+.generation-page .bar-note{margin:8px 0 22px;font-size:12px;color:var(--secondary)}
+
+.generation-page .steps{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.generation-page .step{display:flex;gap:14px;align-items:flex-start;padding:12px 4px;border-bottom:1px solid #f1f5f9;opacity:1;transition:opacity .3s}
+.generation-page .step:last-child{border-bottom:0}
+.generation-page .step.pending{opacity:.45}
+.generation-page .step .loader,.generation-page .mark{flex:none;width:22px;height:22px;margin-top:1px}
+.generation-page .mark{display:grid;place-items:center;border-radius:50%}
+.generation-page .mark.pending{border:2px solid #d5dce8}
+.generation-page .mark.done{background:#05a58b;color:#fff}
+.generation-page .mark.failed{background:#f59e0b;color:#fff}
+.generation-page .step-label{margin:0;font-size:14px;font-weight:500}
+.generation-page .step-detail{margin:3px 0 0;font-size:13px;color:var(--secondary);animation:reveal .35s var(--ease)}
+@keyframes reveal{from{opacity:0;transform:translateY(-3px)}}
+
+.generation-page .result{margin-top:18px;border-radius:14px;padding:14px 16px;font-size:14px;line-height:1.55}
+.generation-page .result p{margin:0}
+.generation-page .result.info{background:#f0f7ff;border:1px solid #d6e7ff;color:#1e4fa8}
+.generation-page .result.error{background:#fef2f2;border:1px solid #fee2e2;color:#b42336}
+.generation-page .row{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
+.generation-page .primary,.generation-page .secondary{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 24px;border-radius:9999px;font:500 14px var(--font);text-decoration:none;cursor:pointer;border:0}
+.generation-page .primary{background:var(--gradient);color:#fff}
+.generation-page .secondary{border:1px solid #d5dce8;background:#fff;color:var(--text)}
+.generation-page .gen-message{max-width:520px;margin:12vh auto 0;text-align:center}
+.generation-page .gen-message h1{font-size:26px;letter-spacing:-.8px;margin:0 0 10px}
+.generation-page .gen-message p{color:var(--secondary);margin:0 0 20px;line-height:1.6}
+.generation-page .gen-message .row{justify-content:center}
+
+@media(max-width:900px){.generation-page .gen-grid{grid-template-columns:1fr}.generation-main{padding:0 12px 24px}}

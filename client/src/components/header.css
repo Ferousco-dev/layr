@@ -1,0 +1,31 @@
+/* Shared app header: brand, main navigation and the profile menu. */
+.header{position:sticky;top:0;z-index:30;width:100%;height:88px;max-width:1536px;margin:0 auto;padding:18px 4.4%;display:flex;align-items:center;justify-content:space-between;background:#ffffffe6;backdrop-filter:blur(8px);border-bottom:1px solid transparent}
+.profile{position:relative}
+.profile-button{display:flex;align-items:center;gap:12px;border:1px solid var(--border)!important;border-radius:9999px;padding:5px 12px 5px 8px;min-height:50px;font-size:14px;background:#fff!important;transition:box-shadow .18s var(--ease)}
+.profile-button:hover{box-shadow:0 4px 14px #0f172a12}
+.profile-button img,.avatar-fallback.big{height:38px;width:38px;border-radius:50%;object-fit:cover}
+.chevron{width:20px;height:20px;color:var(--secondary);transition:transform .18s var(--ease)}
+.profile-button[aria-expanded=true] .chevron{transform:rotate(180deg)}
+.avatar-fallback{display:inline-grid;place-items:center;border-radius:50%;background:var(--selected);color:var(--blue);font-weight:600}
+.dropdown{position:absolute;right:0;top:58px;z-index:5;background:#fff;padding:8px;width:220px;border:1px solid var(--border);border-radius:14px;box-shadow:0 16px 40px #0f172a15;animation:pop .16s var(--ease)}
+.dropdown button{display:block;text-align:left;padding:12px;width:100%;border-radius:8px;min-height:44px}
+.dropdown button:hover{background:var(--page)}
+.dropdown-email{margin:0;padding:8px 12px;font-size:12px;color:var(--secondary);overflow:hidden;text-overflow:ellipsis}
+@keyframes pop{from{opacity:0;transform:translateY(-4px)}}
+.header button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
+.dropdown a{display:flex;align-items:center;padding:12px;border-radius:8px;min-height:44px;color:var(--text);text-decoration:none;font-size:14px}
+.dropdown a:hover{background:var(--page)}
+@media(max-width:1023px){.header{padding-left:32px;padding-right:32px}}
+@media(max-width:639px){
+  .header{height:76px;padding:14px 16px}
+      .profile-button{padding:4px 8px;gap:4px;min-height:44px}
+  .profile-name{display:none}
+  .profile-button img,.avatar-fallback.big{width:30px;height:30px}
+}
+
+/* Fixed top bar for public pages (legal, contact). */
+:root{--page-header:68px}
+.page-header{position:sticky;top:0;z-index:30;height:var(--page-header);display:flex;align-items:center;justify-content:space-between;padding:0 max(24px,4.4vw);background:#ffffffee;backdrop-filter:blur(8px);border-bottom:1px solid #eef2f6}
+.page-header .back{color:var(--secondary);font-size:14px;text-decoration:none}
+.page-header .back:hover{color:var(--text);text-decoration:underline}
+@media(max-width:900px){.page-header{padding:0 16px}}

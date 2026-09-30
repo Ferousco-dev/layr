@@ -1,0 +1,43 @@
+/* Global tokens, reset and the page shell shared by every screen. */
+*{box-sizing:border-box}
+:root{
+  --text:#10111f;--muted:#858498;--secondary:#667085;--link:#5443ed;--focus:#5a42ed;
+  --page:#f8fafc;--border:#e5eaf2;--selected:#eef4ff;--blue:#2563eb;--danger:#dc2626;
+  --gradient:linear-gradient(100deg,#3157f6 0%,#168ef4 48%,#08d9c4 100%);
+  --ease:cubic-bezier(.2,0,0,1);
+  --font:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Arial,Helvetica,sans-serif;
+}
+html,body{margin:0;min-height:100%;font-family:var(--font);color:var(--text)}
+body{background:#fff}
+button,input{font:inherit}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--focus);outline-offset:4px}
+[hidden]{display:none!important}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* Every screen is a column at least one viewport tall, so the footer rests at the bottom. */
+.page{position:relative;min-height:100svh;display:flex;flex-direction:column}
+.page>main,.page>article{flex:1}
+
+.brand{display:flex;align-items:center;gap:12px;font-size:27px;font-weight:700;letter-spacing:-1px;color:var(--text);text-decoration:none}
+.brand img{display:block;object-fit:contain}
+.brand.small{font-size:20px;gap:9px}
+
+.site-footer{margin-top:auto;display:flex;justify-content:flex-end;align-items:center;gap:16px;padding:8px 28px 12px}
+.site-footer nav{display:flex;gap:16px}
+.site-footer a{color:#818093;text-decoration:none;font-size:12px;line-height:1;padding:8px 2px;display:inline-flex;align-items:center}
+.site-footer a:hover{color:#302b69;text-decoration:underline}
+.site-footer.with-brand{width:100%;max-width:1536px;margin:auto auto 0;justify-content:space-between;border-top:1px solid #eef2f6;padding:6px 4.4%}
+.site-footer.with-brand a{color:var(--secondary)}
+.site-footer.with-brand a:hover{color:var(--text)}
+.brand.small{font-size:14px;gap:6px;letter-spacing:-.4px}
+
+.doc{font:18px/1.6 var(--font);max-width:720px;width:100%;margin:12vh auto 0;padding:24px}
+.doc a{color:var(--link)}
+.doc h1{font-size:34px;letter-spacing:-1px;margin:16px 0 8px}
+
+@media(max-width:700px){
+  .site-footer{justify-content:center;padding:6px 16px 10px}
+  .site-footer.with-brand{justify-content:space-between;padding:6px 16px}
+}
+@media(min-width:640px) and (max-width:1023px){.site-footer.with-brand{padding-left:32px;padding-right:32px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}

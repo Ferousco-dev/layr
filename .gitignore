@@ -1,0 +1,5 @@
+.DS_Store
+.env
+server/.env
+server/bin/
+coverage.out

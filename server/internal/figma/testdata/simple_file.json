@@ -1,0 +1,40 @@
+{
+  "name": "Landing Page",
+  "role": "viewer",
+  "lastModified": "2026-01-02T03:04:05Z",
+  "editorType": "figma",
+  "thumbnailUrl": "https://example.test/thumb.png",
+  "version": "4242",
+  "schemaVersion": 0,
+  "futureTopLevelField": {"anything": true},
+  "document": {
+    "id": "0:0",
+    "name": "Document",
+    "type": "DOCUMENT",
+    "children": [
+      {
+        "id": "0:1",
+        "name": "Page 1",
+        "type": "CANVAS",
+        "children": [
+          {
+            "id": "1:2",
+            "name": "Hero",
+            "type": "FRAME",
+            "clipsContent": true,
+            "absoluteBoundingBox": {"x": 0, "y": 0, "width": 1440, "height": 800},
+            "constraints": {"vertical": "TOP", "horizontal": "LEFT_RIGHT"},
+            "children": [
+              {"id": "1:3", "name": "Mystery", "type": "FUTURE_SUPER_NODE", "brandNewField": 7}
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "components": {
+    "2:1": {"key": "abc", "name": "Button", "description": "Primary", "componentSetId": "2:0"}
+  },
+  "componentSets": {"2:0": {"key": "set1", "name": "Button set"}},
+  "styles": {"S:1": {"key": "st1", "name": "Body", "styleType": "TEXT"}}
+}
